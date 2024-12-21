@@ -76,7 +76,7 @@ public class Runigram {
 		Color[][] newArr = new Color[image.length][image[0].length];
 		for(int i = 0; i < image.length; i++) {
 			for (int j = 0; j < image[i].length; j++) {
-				newArr[i][j] = image[image.length -1 - i][j];
+				newArr[i][j] = image[i][image[i].length - 1 - j];
 			}
 		}
 		return newArr;
@@ -89,7 +89,7 @@ public class Runigram {
 		Color[][] newArr = new Color[image.length][image[0].length];
 		for(int i = 0; i < image.length; i++) {
 			for (int j = 0; j < image[i].length; j++) {
-				newArr[i][j] = image[i][image[i].length -1 - j];
+				newArr[i][j] = image[image.length - 1 - i][j];
 			}
 		}
 		return newArr;
@@ -185,7 +185,7 @@ public class Runigram {
 			Color[][] blendedImage = blend(source, target, alpha);
 
 			display(blendedImage);
-			StdDraw.pause(1);
+			StdDraw.pause(500);
 		}
 	}
 	
